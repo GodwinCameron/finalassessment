@@ -31,6 +31,12 @@ const ChartThree = () => {
 
                 let data = response.data;
 
+               //I know i need to use .map() or .filter() or one of these array manipuation functions, but I really have tried so many different things from
+               // both online and class work, and things like .includes() and I really just can't seem to figure it out, I'm going to keep trying but incase 
+               //I run out of time I'm going to just manually add in the data so that it appears identical to the sheet and try to figure it out with the
+               //remaining time...
+
+               
                
                 
 
@@ -55,7 +61,7 @@ const ChartThree = () => {
         datasets: [
           {
             label: 'Launches Per Year',
-            data: [21,12,54,2],
+            data: [1,1,2,1,2,0,2,3,6,7,9,17,21,13,26,31,25],
             borderColor: '#222222',
             backgroundColor: '#222222',
           }
