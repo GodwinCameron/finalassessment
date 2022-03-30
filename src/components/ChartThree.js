@@ -24,6 +24,9 @@ import {
 
 const ChartThree = () => {
 
+    const [values, setValues] = useState([]);
+    const pushedValues = [];
+
     let endpoint = "https://api.spacexdata.com/v4/launches"; 
     useEffect(() => {
         axios.get(endpoint)
@@ -31,13 +34,30 @@ const ChartThree = () => {
 
                 let data = response.data;
 
-               //I know i need to use .map() or .filter() or one of these array manipuation functions, but I really have tried so many different things from
-               // both online and class work, and things like .includes() and I really just can't seem to figure it out, I'm going to keep trying but incase 
-               //I run out of time I'm going to just manually add in the data so that it appears identical to the sheet and try to figure it out with the
-               //remaining time...
+               const year1 = data.filter(data => data.date_local.includes("2006"));
+               const year2 = data.filter(data => data.date_local.includes("2007"));
+               const year3 = data.filter(data => data.date_local.includes("2008"));
+               const year4 = data.filter(data => data.date_local.includes("2009"));
+               const year5 = data.filter(data => data.date_local.includes("2010"));
+               const year6 = data.filter(data => data.date_local.includes("2011"));
+               const year7 = data.filter(data => data.date_local.includes("2012"));
+               const year8 = data.filter(data => data.date_local.includes("2013"));
+               const year9 = data.filter(data => data.date_local.includes("2014"));
+               const year10 = data.filter(data => data.date_local.includes("2015"));
+               const year11 = data.filter(data => data.date_local.includes("2016"));
+               const year12 = data.filter(data => data.date_local.includes("2017"));
+               const year13 = data.filter(data => data.date_local.includes("2018"));
+               const year14 = data.filter(data => data.date_local.includes("2019"));
+               const year15 = data.filter(data => data.date_local.includes("2020"));
+               const year16 = data.filter(data => data.date_local.includes("2021"));
+               const year17 = data.filter(data => data.date_local.includes("2022"));
 
+
+               pushedValues.push(year1.length,year2.length,year3.length,year4.length,year5.length,year6.length,year7.length,year8.length,year9.length,year10.length,year11.length,year12.length,year13.length,year14.length,year15.length,year16.length,year17.length);
                
-               
+               setValues(pushedValues,[]);
+
+               // I DID IT!!!!!!! LETS GOO!!!!!!
                 
 
             })
@@ -61,7 +81,7 @@ const ChartThree = () => {
         datasets: [
           {
             label: 'Launches Per Year',
-            data: [1,1,2,1,2,0,2,3,6,7,9,17,21,13,26,31,25],
+            data: values, 
             borderColor: '#222222',
             backgroundColor: '#222222',
           }
