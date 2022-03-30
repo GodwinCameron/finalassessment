@@ -1,13 +1,59 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.title{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-left: 40%;
+
+}
+
+.chart-holder{
+  margin-top: 35px;
+  width: 100%;
+  height: 30vh;
+}
+
+.chart-one{
+  width: 15%;
+  height: 100%;
+  float: left;
+}
+.chart-two{
+  width: 35%;
+  height: 100%;
+  float: left;
+  margin-left: 2%;
+}
+.chart-three{
+  width: 45%;
+  height: 100%;
+  float: left;
+  margin-left: 2%;
+}
+
+.mission-log-title{
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.mission-log-container{
+  margin-top: 10px;
+  width: 100%;
+  height: 80vh;
+}
+
+.mission-card{
+  padding: 10px;
+  width: 20%;
+  height: 300px;
+  background-color: rgb(179, 179, 179);
+  float: left;
+  margin: auto;
+  margin-left: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
 }
